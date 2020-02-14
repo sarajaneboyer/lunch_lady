@@ -17,7 +17,6 @@ def get_main_dish
   @main_dishes.each_with_index { |val, index| puts "    #{index + 1}) #{val}  $#{@main_dishes_prices[index]}" }
   @user_main_dish = gets.strip.to_i
   @main_dish_name = @main_dishes[@user_main_dish - 1]
-  puts @main_dish_name
   @user_main_price = @main_dishes_prices[@user_main_dish - 1]
   puts "One #{@main_dishes[@user_main_dish - 1]} coming right up!"
 end
@@ -27,7 +26,7 @@ def give_main_nutrition
   puts "Would you like to see the nutritionals for your #{@main_dish_name}"
   response = gets.strip.downcase
   if response == "yes"
-    puts @main_nutrition[@user_main_dish - 1]
+    p @main_nutrition[@user_main_dish - 1]
   end
 end
 
