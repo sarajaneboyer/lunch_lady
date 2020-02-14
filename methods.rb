@@ -75,3 +75,10 @@ end
 #   {cals: 267, carbs: 33, fat: 6}
 #   {cals: 216, carbs: 44, fat: 2}
 # ]
+
+# #for main dish
+# puts "would you like to see the nutrition information for that dish?"
+# response = gets.strip.downcase
+# if response == "yes"
+#   puts @main_nutrition[@user_main_dish + 1] -> how can I make this print in a better format?
+# end

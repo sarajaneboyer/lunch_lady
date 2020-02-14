@@ -25,6 +25,8 @@ def app
   
        give_total
       #trying to create an array of totals for orders with multiple meals to give a combined total
+      #can't get a loop that doesn't stop after 2 iterations with nested methods
+      #try loop do and break with an else
   #   totals = [0]
   #   totals << give_total
   #   sum = totals.inject(:+)
