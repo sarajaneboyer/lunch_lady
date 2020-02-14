@@ -44,7 +44,7 @@ end
   end
 
 
-#function that gives user their total
+#function that gives user their total - why is it printing the total twice on the first iteration?
 def give_total
   @total = @main_dishes_prices[@user_main_dish - 1] + 4
   # return @total
