@@ -10,7 +10,9 @@ def app
       get_main_dish
       give_main_nutrition
       first_side
+      give_first_side_nutrition
       second_side
+      give_second_side_nutrition
       repeat_order
 
       def verify_order

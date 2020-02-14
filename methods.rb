@@ -27,7 +27,7 @@ def give_main_nutrition
   puts "Would you like to see the nutritionals for your #{@main_dish_name}"
   response = gets.strip.downcase
   if response == "yes"
-    puts @main_nutrition[@user_main_dish + 1]
+    puts @main_nutrition[@user_main_dish - 1]
   end
 end
 
@@ -39,13 +39,32 @@ def first_side
   @first_side_name = @side_dishes[@user_first_side - 1]
 end
 
-#unction that displays list of side dishes and asks them to choose one [stores as side2]
+#function that displays list of side dishes and asks them to choose one [stores as side2]
 def second_side
   puts "And what would like for your second side?"
   @side_dishes.each_with_index { |val, index| puts "    #{index + 1}) #{val}  $2"}
   @user_second_side = gets.strip.to_i
   @second_side_name = @side_dishes[@user_second_side - 1]
 end
+
+#function gives nutrion info for first side
+def give_first_side_nutrition
+  puts "Would you like to see the nutritionals for your #{@first_side_name}"
+  response = gets.strip.downcase
+  if response == "yes"
+    puts @side_nutrition[@user_first_side - 1]
+  end
+end
+
+#function gives nutition for second side
+def give_second_side_nutrition
+  puts "Would you like to see the nutritionals for your #{@second_side_name}"
+  response = gets.strip.downcase
+  if response == "yes"
+    puts @side_nutrition[@user_second_side - 1]
+  end
+end
+
 
 #function that repeats back the order
   def repeat_order
