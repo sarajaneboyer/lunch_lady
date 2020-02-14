@@ -22,6 +22,14 @@ def get_main_dish
   puts "One #{@main_dishes[@user_main_dish - 1]} coming right up!"
 end
 
+#function to show the nutrition facts for the dish they chose
+def give_nutrition
+  puts "Would you like to see the nutritionals for your #{@main_dish_name}"
+  response = gets.strip.downcase
+  if response == "yes"
+    puts @main_nutrition[@user_main_dish + 1]
+  end
+
 #function that displays list of side dishes and asks them to choose one [stores as side1]
 def first_side
   puts "You can choose 2 sides. What is your first choice?"
@@ -61,24 +69,17 @@ end
 
 
 #arrays of nutrition information to be added to the menu
-# @main_nutrition = [
-#   {cals: 609, carbs: 55, fat: 23}
-#   {cals: 370, carbs: 26, fat: 15}
-#   {cals: 330, carbs: 13, fat: 15}
-#   {cals: 480, carbs: 40, fat: 24}
-# ]
+@main_nutrition = [
+  {cals: 609, carbs: 55, fat: 23},
+  {cals: 370, carbs: 26, fat: 15},
+  {cals: 330, carbs: 13, fat: 15},
+  {cals: 480, carbs: 40, fat: 24},
+]
 
-# @side_nutrition [
-#   {cals: 232, carbs: 48, fat: 2}
-#   {cals: 40, carbs: 3, fat: 2}
-#   {cals: 100, carbs: 6, fat: 8}
-#   {cals: 267, carbs: 33, fat: 6}
-#   {cals: 216, carbs: 44, fat: 2}
-# ]
-
-# #for main dish
-# puts "would you like to see the nutrition information for that dish?"
-# response = gets.strip.downcase
-# if response == "yes"
-#   puts @main_nutrition[@user_main_dish + 1] -> how can I make this print in a better format?
-# end
+@side_nutrition [
+  {cals: 232, carbs: 48, fat: 2},
+  {cals: 40, carbs: 3, fat: 2},
+  {cals: 100, carbs: 6, fat: 8},
+  {cals: 267, carbs: 33, fat: 6},
+  {cals: 216, carbs: 44, fat: 2},
+]
