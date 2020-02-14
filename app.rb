@@ -22,25 +22,23 @@ def app
       end
   
        verify_order
-    end 
   
-  get_order
-  
-  give_total
-  
-    #this is causing an issue where it only repeats get_order once and then we are at the end of the app method.
-  puts "Would you like to place another order? Yes or no?"
-  answer = gets.strip.downcase
-  if answer == "yes"
-    get_order
-  end
-
+       give_total
       #trying to create an array of totals for orders with multiple meals to give a combined total
   #   totals = [0]
   #   totals << give_total
   #   sum = totals.inject(:+)
   #   puts "Your total is $#{sum}"
   #   puts "Enjoy your lunch!"
+end
+  get_order
+  
+      puts "Would you like to place one more order? Yes or no?"
+      answer = gets.strip.downcase
+      if answer == "yes"
+        get_order
+      end
+  
 
   puts "Enjoy your lunch!"
 end
