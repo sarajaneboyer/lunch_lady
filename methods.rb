@@ -77,7 +77,7 @@ end
   {cals: 480, carbs: 40, fat: 24},
 ]
 
-@side_nutrition [
+@side_nutrition = [
   {cals: 232, carbs: 48, fat: 2},
   {cals: 40, carbs: 3, fat: 2},
   {cals: 100, carbs: 6, fat: 8},
