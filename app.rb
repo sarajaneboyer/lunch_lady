@@ -8,6 +8,7 @@ def app
   
   def get_order
       get_main_dish
+      give_main_nutrition
       first_side
       second_side
       repeat_order

@@ -23,12 +23,13 @@ def get_main_dish
 end
 
 #function to show the nutrition facts for the dish they chose
-def give_nutrition
+def give_main_nutrition
   puts "Would you like to see the nutritionals for your #{@main_dish_name}"
   response = gets.strip.downcase
   if response == "yes"
     puts @main_nutrition[@user_main_dish + 1]
   end
+end
 
 #function that displays list of side dishes and asks them to choose one [stores as side1]
 def first_side
