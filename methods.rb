@@ -47,13 +47,31 @@ end
 #function that gives user their total
 def give_total
   @total = @main_dishes_prices[@user_main_dish - 1] + 4
-  return @total
-  #puts "Your total is $#{@total}"
+  # return @total
+  puts "Your total is $#{@total}"
 end
 
 #array of main dishes
-@main_dishes = ["Spaghetti & Meatballs","Tuna Poke","Chicken","Cheeseburger"]
+@main_dishes = ["Spaghetti & Meatballs","Tuna Poke","Chicken Cordon Bleu","Cheeseburger"]
 @main_dishes_prices = [5,7,6,6]
 
 #array of side dishes
 @side_dishes = ["Mashed Potatoes","Side Salad","Steamed Broccoli","French Fries","Brown Rice"]
+
+
+
+#arrays of nutrition information to be added to the menu
+@main_nutrition = [
+  {cals: 609, carbs: 55, fat: 23}
+  {cals: 370, carbs: 26, fat: 15}
+  {cals: 330, carbs: 13, fat: 15}
+  {cals: 480, carbs: 40, fat: 24}
+]
+
+@side_nutrition [
+  {cals: 232, carbs: 48, fat: 2}
+  {cals: 40, carbs: 3, fat: 2}
+  {cals: 100, carbs: 6, fat: 8}
+  {cals: 267, carbs: 33, fat: 6}
+  {cals: 216, carbs: 44, fat: 2}
+]
